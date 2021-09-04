@@ -6,14 +6,19 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-
+    <!--импотрируем файл с зависимостями-->
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
     <!--описание бина-->
     <bean id="musicBean"
-          class="misha.RockMusic">
+          class="misha.JazzMusic">
     </bean>
     <bean id="musicPlayer"
           class="misha.MusicPlayer">
-    <constructor-arg ref="musicBean"/>   <!--   внедряем зависимость - мы ссылаемся на созданный бин-->
+        <property name="music" ref="musicBean"/>  <!--   внедряем зависимость - мы ссылаемся на созданный бин-->
+        <!-- определяем поля и значения ссылок на переменные файле проперт ис   -->
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="value" value="${musicPlayer.value}"/>
     </bean>
+
 
 </beans>
