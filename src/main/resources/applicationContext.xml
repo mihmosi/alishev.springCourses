@@ -19,7 +19,7 @@
           class="misha.ClassicalMusic"
           init-method="doMyInit"
           destroy-method="doMyDestroy"
-         >
+          factory-method="getClassicalMusic">
 
     </bean>
 

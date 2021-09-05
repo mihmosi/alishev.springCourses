@@ -10,11 +10,8 @@ public class TestSpring {
         ClassicalMusic classicalMusic
                 = context.getBean("musicBean3", ClassicalMusic.class);
 
-        ClassicalMusic classicalMusic2
-                = context.getBean("musicBean3", ClassicalMusic.class);
-
         System.out.println(classicalMusic.getSong());
-        System.out.println(classicalMusic2.getSong());
+
 
         /* получаем из контекста то что реализует интерфейс Music */
 //        Music music = context.getBean("musicBean", Music.class);
