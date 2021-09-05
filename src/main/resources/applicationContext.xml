@@ -20,7 +20,8 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="misha.MusicPlayer">
+          class="misha.MusicPlayer"
+          scope="prototype">
         <property name="musicList">
             <list>
                 <ref bean="musicBean1"/>
