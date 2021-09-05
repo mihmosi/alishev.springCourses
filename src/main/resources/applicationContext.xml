@@ -6,38 +6,43 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
-    <!--импотрируем файл с зависимостями-->
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
-    <!--описание бина-->
-    <!--    <bean id="musicBean1"-->
-    <!--          class="misha.RockMusic">-->
+
+    <!--включает сканирование компонентов-->
+    <context:component-scan base-package="misha"/>
+
+
+    <!--    &lt;!&ndash;импотрируем файл с зависимостями&ndash;&gt;-->
+    <!--    <context:property-placeholder location="classpath:musicPlayer.properties"/>-->
+    <!--    &lt;!&ndash;описание бина&ndash;&gt;-->
+    <!--    &lt;!&ndash;    <bean id="musicBean1"&ndash;&gt;-->
+    <!--    &lt;!&ndash;          class="misha.RockMusic">&ndash;&gt;-->
+    <!--    &lt;!&ndash;    </bean>&ndash;&gt;-->
+    <!--    &lt;!&ndash;    <bean id="musicBean2"&ndash;&gt;-->
+    <!--    &lt;!&ndash;          class="misha.JazzMusic">&ndash;&gt;-->
+    <!--    &lt;!&ndash;    </bean>&ndash;&gt;-->
+    <!--    <bean id="musicBean3"-->
+    <!--          class="misha.ClassicalMusic"-->
+    <!--          init-method="doMyInit"-->
+    <!--          destroy-method="doMyDestroy"-->
+    <!--          factory-method="getClassicalMusic">-->
+
     <!--    </bean>-->
-    <!--    <bean id="musicBean2"-->
-    <!--          class="misha.JazzMusic">-->
-    <!--    </bean>-->
-    <bean id="musicBean3"
-          class="misha.ClassicalMusic"
-          init-method="doMyInit"
-          destroy-method="doMyDestroy"
-          factory-method="getClassicalMusic">
 
-    </bean>
-
-    <!--    <bean id="musicPlayer"-->
-    <!--          class="misha.MusicPlayer"-->
-    <!--          scope="prototype">-->
-    <!--        <property name="musicList">-->
-    <!--            <list>-->
-    <!--                <ref bean="musicBean1"/>-->
-    <!--                <ref bean="musicBean2"/>-->
-    <!--                <ref bean="musicBean3"/>-->
-    <!--            </list>-->
-    <!--        </property>-->
+    <!--    &lt;!&ndash;    <bean id="musicPlayer"&ndash;&gt;-->
+    <!--    &lt;!&ndash;          class="misha.MusicPlayer"&ndash;&gt;-->
+    <!--    &lt;!&ndash;          scope="prototype">&ndash;&gt;-->
+    <!--    &lt;!&ndash;        <property name="musicList">&ndash;&gt;-->
+    <!--    &lt;!&ndash;            <list>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                <ref bean="musicBean1"/>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                <ref bean="musicBean2"/>&ndash;&gt;-->
+    <!--    &lt;!&ndash;                <ref bean="musicBean3"/>&ndash;&gt;-->
+    <!--    &lt;!&ndash;            </list>&ndash;&gt;-->
+    <!--    &lt;!&ndash;        </property>&ndash;&gt;-->
 
 
-    <!--        <property name="name" value="${musicPlayer.name}"/>-->
-    <!--        <property name="value" value="${musicPlayer.value}"/>-->
-    <!--    </bean>-->
+    <!--    &lt;!&ndash;        <property name="name" value="${musicPlayer.name}"/>&ndash;&gt;-->
+    <!--    &lt;!&ndash;        <property name="value" value="${musicPlayer.value}"/>&ndash;&gt;-->
+    <!--    &lt;!&ndash;    </bean>&ndash;&gt;-->
 
 
 </beans>

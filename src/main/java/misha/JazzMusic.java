@@ -1,8 +1,8 @@
-package misha;
-
-public class JazzMusic implements Music{
-    @Override
-    public String getSong() {
-        return "Summer Time";
-    }
-}
+//package misha;
+//
+//public class JazzMusic implements Music{
+//    @Override
+//    public String getSong() {
+//        return "Summer Time";
+//    }
+//}

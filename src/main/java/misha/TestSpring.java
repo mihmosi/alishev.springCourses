@@ -7,15 +7,21 @@ public class TestSpring {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"    //выводим в контекст адрес конфигурации
         );
-        ClassicalMusic classicalMusic
-                = context.getBean("musicBean3", ClassicalMusic.class);
-
-        System.out.println(classicalMusic.getSong());
+//        ClassicalMusic classicalMusic
+//                = context.getBean("musicBean", ClassicalMusic.class);
+//
+//        System.out.println(classicalMusic.getSong());
 
 
         /* получаем из контекста то что реализует интерфейс Music */
-//        Music music = context.getBean("musicBean", Music.class);
-//        MusicPlayer musicPlayer = new MusicPlayer(music);
+        Music music = context.getBean("rockMusic", Music.class);
+        Music music2 = context.getBean("classicalMusic", Music.class);
+
+        MusicPlayer musicPlayer = new MusicPlayer(music);
+        MusicPlayer musicPlayer2 = new MusicPlayer(music2);
+
+        musicPlayer.playMusic();
+        musicPlayer2.playMusic();
 
 //        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 //        MusicPlayer musicPlayer1 = context.getBean("musicPlayer", MusicPlayer.class);
@@ -25,7 +31,7 @@ public class TestSpring {
 //        musicPlayer.playMusicList();
 //        System.out.println(comparsion);
 //
-//        System.out.println(musicPlayer);
+
 //        System.out.println(musicPlayer1);
 
 //        System.out.println(musicPlayer.getName());
